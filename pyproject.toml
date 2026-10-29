@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdftool"
+version = "1.0.0"
+description = "CLI para unir, partir, rotar y extraer texto de archivos PDF"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Nicolás Barbudez" }]
+dependencies = ["pypdf>=4"]
+
+[project.optional-dependencies]
+dev = ["pytest", "fpdf2", "ruff"]
+
+[project.scripts]
+pdftool = "pdftool.cli:main"
+
+[tool.ruff]
+line-length = 110

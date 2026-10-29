@@ -50,7 +50,7 @@ ruff check . && ruff format --check .
 ## CI/CD
 
 - Cada push y PR corre lint y tests en Python 3.10 a 3.13 ([ci.yml](.github/workflows/ci.yml)).
-- Al pushear un tag `v*` se construye la wheel y se publica una release en GitHub ([release.yml](.github/workflows/release.yml)).
+- Al pushear un tag `v*`, o al correrlo a mano, se construye la wheel y se publica una release en GitHub con el tag de la versión de `pyproject.toml` ([release.yml](.github/workflows/release.yml)).
 
 ## Licencia
 
